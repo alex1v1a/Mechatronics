@@ -1,0 +1,19 @@
+OWStat;O0;WORD(Bin);outputbyte station
+OWPan;O1;WORD(Bin);outputbyte panel
+B2;OW0.01;BIT;Metallic workpiece
+B3;OW0.02;BIT;Workpiece not black
+B4;OW0.03;BIT;Slide full
+_1B1;OW0.04;BIT;Switch 1 retracted
+_1B2;OW0.05;BIT;Switch 1 extended
+_2B1;OW0.06;BIT;Switch 2 retracted
+_2B2;OW0.07;BIT;Switch 2 extended
+S1;OW1.00;BIT;Start button
+S2;OW1.01;BIT;Stop button (normally closed)
+S3;OW1.02;BIT;Automatic-manual switch
+S4;OW1.03;BIT;Reset button
+EM_Stop;OW1.05;BIT;Emergency stop unlocked
+Part_AV;OW0.00;BIT;Part available
+Timer1;T0;BIT;
+Var1;FW74;WORD(Bin);Variable 1
+T_Blink1;T1;BIT;Blink timer 1
+T_Blink2;T2;BIT;Blink timer 2

@@ -1,0 +1,17 @@
+wn:Em_Stop;
+dc0
+
+wa
+dc2
+
+wn:S2;
+dc1
+
+w:S1;
+dsP1
+s:_P1;
+r:_1M1;
+r:_1M2;
+r:_2M1;
+r:_3M1;
+

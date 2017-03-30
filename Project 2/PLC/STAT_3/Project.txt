@@ -1,0 +1,245 @@
+Ablaufprogramm Handhaben / program sequence Handling
+
+Zu Beginn wird unterschieden ob die Station bereits gerichtet wurde oder nicht.
+Ist die Station noch nicht gerichtet (Merker Reset_OK = 0-Signal) so verzweigt
+das Programm alternativ zum Richten Teil. 
+Wird ein Werkstück eingelegt , so fährt der Greifer herunter, das Teil wird identifiziert
+(schwarz / nicht schwarz). In Abhängichkeit dieses Ergebnisses wird dann das Teil 
+an 2 verschiedene Positionen transportiert und abgelegt.
+
+At the beginning the program checks if the station has ever been reset. If
+the station is not yet reset (flag Reset_OK = 0-signal) the program
+alternates to the "reset" program part.
+After a workpiece is put to the station the gripper is lowered and
+identifies the part (black / not black). In dependance of this result the
+part is positiond in two differend kinds and deposited
+
+
+Schritt 1 / Step 1
+Initialisierungsschritt
+Wenn der Merker "Reset_OK" und Merker "Init_Pos" gesetzt sind, weiter mit 
+Schritt 5. Wenn Merker "Reset_OK" nicht gesetzt und NOT-AUS nicht aktiv, dann 
+Verzweigung zum Richten-Pfad.
+
+Initialisation step
+If "Reset_OK" flag and "Init_Pos" flag are set, continue with step 5. If
+"Reset_OK" flag nort set and Emergency-Stop not active alternate to reset
+path.
+
+Schritt 2 / Step 2,
+Leuchtmelder Reset einschalten (Anforderung) und auf das Drücken der Richten 
+Taste warten.
+
+Switch on reset indicator light (request) and wait for reset button to be
+pressed.
+
+Schritt 3 / Step 3
+Aktoren in Grundstellung fahren und warten bis Grundstellung erreicht wurde.
+
+Move actuators to initial position and wait for this position to be reached.
+
+Schritt 4 / Step 4
+Merker Reset_OK setzen
+
+Set flag Reset_OK
+
+Schritt 5 / Step 5
+Startbedingung abfragen
+Ohne Startbedigung den Leuchtmelder Start einschalten (Aufforderung) und warten 
+bis Startbedingung vorliegt, sonst Leuchtmelder Start nicht einschalten.
+
+Interrogation of starting condition
+Without starting condition switch on the start indicator light (request) and
+wait for the condition to become true, otherwise don't switch on the
+indicator light.
+
+Schritt 6 / Step 6
+Leuchtmelder Start einschalten und warten bis Startbedingung erfüllt ist.
+
+Switch on the start indicator light and wait for starting condition to
+become true.
+
+Schritt 7 / Step 7
+Auf Werkstück am Eingang warten.
+
+Wait for a workpiece at the material input.
+
+Schritt 8 / Step 8
+Sicherheitstimer starten und Ausgang Station belegt setzen. Warten bis 
+Sicherheitstimer abgelaufen.
+
+Start security timer and set output station occupied. Wait until security
+timer is expired.
+
+Schritt 9 / Step 9
+Greifer öffnen und ausfahren und warten bis Greifer ausgefahren.
+
+Open gripper and extend gripper and wait until gripper is extended.
+
+Schritt 10 / Step 10
+Greifer schliessen und 0.5 sec warten. Ist das Werkstück nicht schwarz, weiter 
+mit Schritt  11. Ist das Werkstück schwarz, weiter mit Schritt 12.
+
+Close gripper and wait for 0.5 sec. If the workpiece is not black continue
+with step 11. If thew workpiece is black continue with step 12.
+
+Schritt 11 / Step 11
+Merker "F_Mat" setzen. "F_Mat " = 1-Signal, wenn Werkstück rot oder silber ist.
+
+Set "F_Mat" flag. "F_Mat" = 1-signal, if workpiece is red or silver.
+
+Schritt 12 / Step 12
+Merker "F_Mat" rücksetzen. "F_Mat " = 0-Signal, wenn Werkstück schwarz ist.
+
+Reset "F_Mat" flag. "F_Mat" = 0-signal, if workpiece is black.
+
+Schritt 13 / Step 13
+Greifer einfahren und warten bis Greifer eingefahren. Wenn "F_Mat" = 1, weiter 
+mit Schritt 14. Wenn "F_Mat" = 0, weiter mit Schritt 15.
+
+Retract gripper and wait until gripper is retracted. If "F_Mat" = 1 continue
+with step 14. If "F_Mat" = 0 continue with step 15.
+
+Schritt 14 / Step 14
+Achse zu Position Rutsche rot/silber bewegen und warten bis Position erreicht.
+
+Move axis to position slide red/silver and wait until position is reached.
+
+Schritt 15 / Step 15
+Achse zu Position Rutsche rot/silber bewegen und warten bis Position erreicht.
+
+Move axis to position slide red/silver and wait until position is reached.
+
+Schritt 16 / Step 16
+Warten bis Übergabepunkt frei ist. Eingang "IP_FI" = 1-Signal. Ohne 
+Folgestation ist die Bedingung immer erfüllt.
+
+Wait until deposit point is clear. Input "IP_FI" = 1-signal. Without
+subsequent station condition is always true.
+
+Schritt 17 / Step 17
+Greifer ausfahren und warten bis Greifer ausgefahren.
+
+Extend gripper and wait until gripper is extended.
+
+Schritt 18 / Step 18
+Greifer öffnen und 1 sec warten. Wenn Timer abgelaufen, weiter mit Schritt 19.
+
+Open gripper and wait for 1 sec. If timer is expired conttinue with step 19.
+
+Schritt 19 / Step 19
+Greifer einfahren und warten bis Greifer eingefahren ist.
+
+Retract gripper and wait until gripper is retracted.
+
+Schritt 20 / Step 20
+Achse zu Position Vorgängerstation bewegen.  Zyklusende-Merker setzen, Ausgang 
+"IP_N_FO" rücksetzen (Station frei) und warten bis Endlage erreicht ist.
+
+Move axis to position preceeding station. Set flag cycle end, reset output
+"IP_N_FO" (station clear) and wait for end position to be reached.
+
+
+Bausteinaufrufe:
+Das Organisationsprogramm ruft den Not-Aus Baustein und 
+das Ablaufprogramm Handhaben auf. Der Not-Aus Baustein wird bedingt aufgerufen, wenn das Not-Aus Signal am Eingang E1.5 anliegt (PNOZ 
+E1.5 = 0-Signal) oder  der Stopptaster gedrückt wird. Das "Ablaufprogramm 
+Handhaben" wird ständig aufgerufen (ohne Bedingung). 
+Grundstellung:
+Die Grundstellung der Station wird im Grundstellungsmerker "Init_Pos" 
+gespeichert. Der Merker hat 1-Signal wenn die Grundstellung vorliegt. Dieser 
+Merker wird an verschiedenen Stellen im Ablaufprogramm abgefragt. 
+Startbedingung:
+Der Merker "F_Start" wird gesetzt, wenn in Grundstellung der Start Taster 
+"S_Start" betätigt wird. Zurückgesetzt wird der Merker "F_Start" in 
+Schalterstellung "Manuell" (S_Auto=1) bei Zyklusende oder wenn Not-Aus 
+vorliegt. 
+Der Merker "F_Start" wird im "Ablaufprogramm Handhaben" als Bedingung eines 
+neuen Zyklus abgefragt. Nur wenn er gesetzt ist kann ein neuer Zyklus beginnen. 
+In der Schalterstellung "Manuell" wird ein Zyklus durchlaufen - In der 
+Schalterstellung "Automatik" Dauerzyklus.
+Initialisierung:
+Das Organisationsprogramm setzt den Initialisierungsmerker "Init_Bit" wieder 
+zurück. "Init_Bit" wird nach jedem Einschalten der SPS gesetzt.
+
+Organisation program
+Calling program blocks:
+The organisation program is calling the Emergency-Stop program block
+and the program sequence PickAlfa (Handling). TheEmergenc-Stop  block conditionally called if the emergency stop signal is at the input I1.5 (PNOZ
+I1.5 = 0-signal) or the stop button was pressed. The program sequence
+PickAlfa (Handling) is running continuously (without condition).
+Initial position:
+The initial position of the station is stored in the "Init_Pos" flag. This flag
+has 1-signal if the station is in initial position. The flag is used in the
+program sequence.
+Start condition:
+The "F_Start" flag is set if in initial position the start button "S_Start" is pressed. Pressing the stop button "S_Stop" in the switch position "manual"
+(S_Auto=1) or emergency stop will reset the "F_Start" flag. The "F_Start" flag
+is used within the "program sequence PickAlfa" as condition to start a new
+cycle. In the switch position "manual" a single cycle is started - in the
+switchposition "automatic" a continuous cycle is started.
+Initialisation:
+The organisation program resets the initialisation flag "Init_Bit". "Init_bit"
+is set during start-up procedure.
+
+
+Aufruf BAP0 Not-Aus / Calling BAP0 Emergency-Stop
+Liegt Not-Aus vor (0-Signal am Not-Aus Eingang E1.5) wird der Not-Aus Baustein 
+aufgerufen. Der Not-Aus Baustein setzt die Bedienpultausgänge und 
+Stationsausgänge zurück. Außerdem wird das Ablaufprogramm zurückgesetzt.
+
+In condition of emergency stop (0-signal at emergency stop input
+I1.5)emergency stop program block is called. The program block resets the
+operating panel outputs and station outputs. Additional the sequentional
+program is reseted.
+
+Aufruf BAP1 Stop / Calling BAP1 Stop
+Liegt Betätigung des Stopptasters vor wird der Stop Baustein aufgerufen. 
+Der Stop Baustein setzt P1 und P2 zurück. Außerdem wird das 
+Ablaufprogramm zurückgesetzt.
+
+In condition of the stop button is pressed the emergency stop program block is
+called. The program block resets P1 (Start indicator light) and P2 (Reset indicator light).
+Additional the sequentional program is reseted.
+
+
+BAP0 Not-Aus / Emergency
+Der Not-Aus Baustein setzt die Ausgänge des Bedienpultes und Stationsausgänge 
+zurück. Außerdem wird das Ablaufprogramm zurückgesetzt.
+
+The program block resets the outputs of the operating panel and
+station outputs. Additional the sequentional program is reseted.
+
+Rücksetzen der Bedienausgänge / Reset operating panel outputs
+Alle Ausgänge des Bedienpults (Leuchtmelder) werden zurückgesetzt (der Wert 0 
+wird in das Ausgangsbyte AB1 geschrieben).
+
+Reset of all operating panel outputs (lights) (the value 0 is written to the
+output byte OB1).
+
+Rücksetzen der Stationsausgänge / Reset station outputs
+Alle Ausgänge der Station werden zurückgesetzt (der Wert 0 
+wird in das Ausgangsbyte AB0 geschrieben).
+
+Reset of all station outputs (the value 0 is written to the
+output byte OB0).
+
+
+BAP1 Stop
+Der Stop Baustein setzt P1 und P2, und die Stationsausgänge zurück . 
+Außerdem wird das Ablaufprogramm zurückgesetzt.
+
+The program block resets P1 (Start indicator light) and P2 (Reset indicator light), and the station outputs.
+Additional the sequentional program is reseted.
+
+Rücksetzen der Stationsausgänge / Reset station outputs
+Alle Ausgänge der Station werden zurückgesetzt (der Wert 0 
+wird in das Ausgangsbyte AB0 geschrieben).
+
+Reset of all station outputs (the value 0 is written to the
+output byte OB0).
+
+BAP2 Blink Option
+Der Baustein lässt Q1 und Q2 blinken wenn Notaus aktiv ist.
+
+The program modul let blink the lamps Q1 and Q2.

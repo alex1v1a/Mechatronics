@@ -1,0 +1,19 @@
+Part_AV;OW0.00;BIT;Workpiece available
+B2;OW0.01;BIT;not black workpiece
+B4;OW0.02;BIT;Safety light barrier
+B5;OW0.03;BIT;Workpiece height correct
+_1B1;OW0.04;BIT;Lifting cylinder raised
+_1B2;OW0.05;BIT;Lifting cylinder lowered
+_2B1;OW0.06;BIT;Ejecting cylinder retracted
+IP_FI;OW0.07;BIT;Downstream station free
+S1;OW1.00;BIT;Start button
+S2;OW1.01;BIT;Stop button (normally closed)
+S3;OW1.02;BIT;Automatic-manual switch
+S4;OW1.03;BIT;Reset button
+Em_Stop;OW1.05;BIT;Emergency stop unlocked
+Timer1;T0;BIT;
+OWStat;O0;WORD(Bin);
+OWPan;O1;WORD(Bin);
+Var1;FW24;WORD(Bin);
+T_Blink1;T1;BIT;Blink timer 1
+T_Blink2;T2;BIT;Blink timer 2

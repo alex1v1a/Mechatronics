@@ -1,0 +1,265 @@
+Ablaufprogramm Sortieren
+Zu Beginn wird unterschieden ob die Station bereits gerichtet wurde oder nicht. 
+Ist die Station noch nicht gerichtet (Merker Reset_OK = 0-Signal) so verzweigt 
+das Programm alternativ zum "Richten"-Pfad.  
+Wird ein Werkstück auf das Band gelegt, erfolgt die Identifizierung des 
+Werkstücks. Abhängig vom Ergebnis der Identifizierung wird das Werkstück auf 
+eine der drei Rutschen transportiert.
+
+Program sequence Sorting
+At the beginning the program checks if the station has
+ever been reset. If the station is not yet reseted (flag
+Reset_OK = 0-signal) the program alternates to the
+"reset" program path.
+If a workpiece is put on the beginning of the conveyor
+belt it is identified. Depending on the result of the
+identification the workpiece is tranported to one of the
+three slides.
+
+
+Schritt 1 / Step 1
+Initialisierungsschritt
+Wenn der Merker "Reset_OK" und Merker "Init_Pos" gesetzt sind, weiter mit 
+Schritt 5. Wenn Merker "Reset_OK" nicht gesetzt und Not-Aus nicht aktiv, dann 
+Verzweigung zum Richten-Pfad.
+
+Initialisation step
+If "Reset_OK" flag and "Init_Pos" flag are set, continue with step 5. If
+"Reset_OK" flag not set and Emergency-Stop not active alternate to reset
+path.
+
+Schritt 2 / Step 2
+Aktoren in Grundstellung fahren und warten bis Grundstellung erreicht wurde. 
+Grundstellung: Bandmotor ausschalten, Weichen einfahren und Stopper ausfahren, 
+Ausgang "Station belegt" setzen.
+
+Switch on reset indicator light (request) and wait for reset button to be
+pressed. If the reset button (control panel) or reset button (remote
+control) is pressed continue with step 3.
+
+Schritt 3 / Step 3
+Aktoren in Grundstellung fahren und warten bis Grundstellung erreicht wurde. 
+Grundstellung: Bandmotor ausschalten, Weichen einfahren und Stopper ausfahren, 
+Ausgang "Station belegt" setzen.
+
+Move actuators to initial position and wait for this position to be reached.
+Initial position: switch off conveyor belt, retract switches, extend stopper, set
+output "Station occupied".
+
+Schritt 4 / Step 4
+Merker Reset_OK setzen. Weiter mit Schritt 5.
+
+Set Reset_OK flag. Continue with step 5.
+
+Schritt 5 / Step 5
+Startbedingung abfragen
+Wenn der Merker "F_Start" nicht gesetzt ist, weiter mit Schritt 6: Leuchtmelder 
+Start einschalten. Wenn der Merker "F_Start" gesetzt ist, weiter mit Schritt 7 
+(Der Leuchtmelder Start wird nicht eingeschaltet).
+
+Interrogation of starting condition
+If "F_Start" flag is not set continue with step 6: Switch on start indicator
+light. If "F_Start" flag is set continue with step 7 (The start indicator
+light is not switched on).
+
+Schritt 6 / Step 6
+Leuchtmelder Start einschalten (Aufforderung) und warten bis Startbedingung 
+erfüllt ist ("F_Start" = 1-Signal).
+
+Switch on the start indicator light (request) and wait for starting
+condition to become true ("F_Start" = 1-signal).
+
+Schritt 7 / Step 7
+Überprüfung ob eine Rutsche voll ist. Bei voller Rutsche weiter mit Schritt 8, 
+sonst weiter mit Schritt 10.
+
+Testing if one slide is full. In this case continue with step 8 otherwise
+continue with step 10.
+
+Schritt 8 / Step 8
+Überprüfung ob eine Rutsche voll ist und der Transportvorgang abgeschlossen 
+ist. 
+Der Timer Delay1 berücksichtigt den Einfluss der Transportzeit.
+
+Testing if one slide is full and the transporting is completed.The Delay1
+timer takes into account the tranportation time.
+
+Schritt 9 / Step 9
+Wenn eine Rutsche voll ist Ausgang "Station belegt" setzen, "P_Start" Lampe und 
+"P_Slide" einschalten, warten bis quittiert.
+
+If one slide is full switch on output "Station occupied", switch on
+"P_Start" and "P_Slide" and wait until confirmed
+
+Schritt 10 / Step 10
+Ausgang "Station belegt" rücksetzen und warten bis ein Werkstück am Bandeingang 
+vorhanden ist.
+
+Reset output "station occupied" and wait until a workpiece is available at
+the conveyor entry.
+
+Schritt 11 / Step 11
+"Station belegt" setzen, Band für 3 sec einschalten, um das  Werkstück zum 
+Stopper zu transportieren. 
+Warten bis Timer abgelaufen und Eingang "Part_AV" = 0-Signal.
+
+Set output "station occupied", switch on the conveyor belt for 3 s and transport workpiece to the stopper.
+Wait until the timer is expired and the input "Part_AV" = 0-signal.
+
+Schritt 12 / Step 12
+Werkstück identifizieren (Messzeit 2 s).
+
+Identification of workpiece (measuring time 2 s).
+
+Schritt 13 / Step 13
+Werkstück einsortieren. Abhängig vom Ergebnis der Identification wird das 
+Werkstück auf einer der drei Rutschen abgelegt.
+
+Sorting workpiece. Depending on the result of the identification the
+workpiece is transported to one of the three slides.
+
+Schritt 14 / Step 14
+Rotes Werkstück:  Weiche 1 ausfahren und warten bis ausgefahren.
+
+Red workpiece: extend switch 1 and wait until switch is extended.
+
+Schritt 15 / Step 15
+Rotes Werkstück:  Stopper einfahren und warten bis das Werkstück auf der 
+Rutsche abgelegt ist.
+
+Red workpiece: retract stopper and wait until workpiece is transported onto
+the slide.
+
+Schritt 16 / Step 16
+Silbernes Werkstück:  Weiche 2 ausfahren und warten bis ausgefahren.
+
+Silver workpiece: extend switch 2 and wait until switch is extended.
+
+Schritt 17 / Step 17
+Silbernes Werkstück:  Stopper einfahren und warten bis das Werkstück auf der 
+Rutsche abgelegt ist.
+
+Silver workpiece: retract stopper and wait until workpiece is transported
+onto the slide.
+
+Schritt 18 / Step 18
+Schwarzes Werkstück:  Stopper einfahren und warten bis das Werkstück auf der 
+Rutsche abgelegt ist.
+
+Black workpiece: retract stopper and wait until workpiece is transported
+onto the slide.
+
+Schritt 19 / Step 19
+Aktoren in Grundstellung und Merker "CycleEnd" setzen. Ausgang "Station 
+belegt" zurücksetzen.
+
+Move actuators to initial position and set "CycleEnd" flag. Reset output
+"Station occupied".
+
+
+Bausteinaufrufe:
+Das Organisationsprogramm ruft den Not-Aus Baustein und 
+das Ablaufprogramm Sortieren auf. Der Not-Aus Baustein wird bedingt aufgerufen, wenn das Not-Aus Signal am Eingang E1.5 
+anliegt (E1.5 = 0-Signal) oder  der Stopptaster gedrückt wird. Das 
+"Ablaufprogramm Sortieren" wird ständig aufgerufen (ohne Bedingung). 
+Grundstellung:
+Die Grundstellung der Station wird im Grundstellungsmerker "Init_Pos" 
+gespeichert. Der Merker hat 1-Signal wenn die Grundstellung vorliegt. Dieser 
+Merker wird an verschiedenen Stellen im Ablaufprogramm abgefragt. 
+Startbedingung:
+Der Merker "F_Start" wird gesetzt, wenn in Grundstellung der Start Taster 
+"S_Start" betätigt wird. Zurückgesetzt wird der Merker "F_Start" in 
+Schalterstellung "Manuell" (S_Auto=1) bei Zyklusende oder wenn Not-Aus 
+vorliegt. 
+Der Merker "F_Start" wird im "Ablaufprogramm Sortieren" als Bedingung eines 
+neuen Zyklus abgefragt. Nur wenn er gesetzt ist kann ein neuer Zyklus beginnen. 
+In der Schalterstellung "Manuell" wird ein Zyklus durchlaufen - In der 
+Schalterstellung "Automatik" Dauerzyklus.
+Initialisierung:
+Das Organisationsprogramm setzt den Initialisierungsmerker "Init_Bit" wieder 
+zurück. "Init_Bit" wird nach jedem Einschalten der SPS gesetzt.
+
+organisation program
+Calling program blocks:
+The organisation program is calling the Emergency-Stop program block
+and the program sequence Sorting). The Emergency-Stop block is
+conditionally called if the emergency stop signal is at the input I1.5 (I1.5 =
+0-signal) or the stop button was pressed. The program sequence
+Sorting is running continuously (without condition).
+Initial position:
+The initial position of the station is stored in the "Init_Pos" flag. This flag
+has 1-signal if the station is in initial position. The flag is used in the
+program sequence.
+Start condition:
+The "F_Start" flag is set if in initial position the start button "S_Start" is
+pressed. Pressing the stop button "S_Stop" in the switch position "manual"
+(S_Auto=1) or emergency stop will reset the "F_Start" flag. The "F_Start" flag
+is used within the "program sequence Sorting" as condition to start a new
+cycle. In the switch position "manual" a single cycle is started - in the
+switch position "automatic" a continuous cycle is started.
+Initialisation:
+The organisation program resets the initialisation flag "Init_Bit". "Init_bit"
+is set during start-up procedure.
+
+
+Aufruf BAP0 Not-Aus / Calling BAP0 Emergency-Stop
+Liegt Not-Aus vor (0-Signal am Not-Aus Eingang E1.5) wird der Not-Aus Baustein 
+aufgerufen. Der Not-Aus Baustein setzt die Bedienpultausgänge und 
+Stationsausgänge zurück. Außerdem wird das Ablaufprogramm zurückgesetzt.
+
+In condition of emergency stop (0-signal at emergency stop input
+I1.5)emergency stop program block is called. The program block resets the
+operating panel outputs and station outputs. Additional the sequentional
+program is reseted.
+
+Aufruf BAP1 Stop / Calling BAP1 Stop
+Liegt Betätigung des Stopptasters vor wird der Stop Baustein aufgerufen. 
+Der Stop Baustein setzt P1 und P2 zurück. Außerdem wird das 
+Ablaufprogramm zurückgesetzt.
+
+In condition of the stop button is pressed the emergency stop program block is
+called. The program block resets P1 (Start indicator light) and P2 (Reset indicator light).
+Additional the sequentional program is reseted.
+
+
+BAP0 Not-Aus / Emergency Stop
+Der Not-Aus Baustein setzt die Ausgänge des Bedienpultes und Stationsausgänge 
+zurück. Außerdem wird das Ablaufprogramm zurückgesetzt.
+
+The program block resets the outputs of the operating panel and
+station outputs. Additional the sequentional program is reseted.
+
+Rücksetzen der Bedienausgänge / Reset operating panel outputs
+Alle Ausgänge des Bedienpults (Leuchtmelder) werden zurückgesetzt (der Wert 0 
+wird in das Ausgangsbyte AB1 geschrieben).
+
+Reset of all operating panel outputs (lights) (the value 0 is written to the
+output byte OB1).
+
+Rücksetzen der Stationsausgänge / Reset station outputs
+Alle Ausgänge der Station werden zurückgesetzt (der Wert 0 
+wird in das Ausgangsbyte AB0 geschrieben).
+
+Reset of all station outputs (the value 0 is written to the
+output byte OB0).
+
+
+BAP1 Stop
+Der Stop Baustein setzt P1 und P2, und die Stationsausgänge zurück . 
+Außerdem wird das Ablaufprogramm zurückgesetzt.
+
+The program block resets P1 (Start indicator light) and P2 (Reset indicator light), and the station outputs.
+Additional the sequentional program is reseted.
+
+
+Rücksetzen der Stationsausgänge / Reset station outputs
+Alle Ausgänge der Station werden zurückgesetzt (der Wert 0 
+wird in das Ausgangsbyte AB0 geschrieben).
+
+Reset of all station outputs (the value 0 is written to the
+output byte OB0).
+
+BAP2 Blink Option
+Der Baustein lässt Q1 und Q2 blinken wenn Notaus aktiv ist.
+
+The program modul let blink the lamps Q1 and Q2.

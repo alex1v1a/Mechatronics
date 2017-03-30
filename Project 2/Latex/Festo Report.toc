@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}INTRODUCTION}{2}
+\contentsline {section}{\numberline {2}METHODOLOGY}{2}
+\contentsline {subsection}{\numberline {2.1}Approach to programming PLC}{2}
+\contentsline {subsection}{\numberline {2.2}Algorithm created}{2}
+\contentsline {section}{\numberline {3}SIGNIFICANCE OF RESEARCH}{2}
+\contentsline {subsection}{\numberline {3.1}Stakeholders}{2}
+\contentsline {subsection}{\numberline {3.2}Ethics}{2}
+\contentsline {subsection}{\numberline {3.3}Limitations}{2}
+\contentsline {subsection}{\numberline {3.4}Timeline}{2}
+\contentsline {section}{\numberline {4}PROJECT PLAN}{2}
+\contentsline {subsection}{\numberline {4.1}Deliverables}{2}
+\contentsline {subsection}{\numberline {4.2}Outcomes}{2}
+\contentsline {subsection}{\numberline {4.3}Results}{2}
+\contentsline {section}{\numberline {5}CONCLUSIONS}{2}

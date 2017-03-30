@@ -1,0 +1,42 @@
+#init;
+wa
+ds:Init_Pos;
+
+#part;
+w:Part_AV;
+ds:IP_N_FO;
+r:_1M1;
+s:Timer1;
+m3
+
+#raise;
+wn:Timer1;
+ds:_1M2;
+
+#push;
+w:_1B1;
+ds:_3M1;
+s:_2M1;
+s:Timer1;
+m2
+
+#wait;
+wn:Timer1;
+dr:_2M1;
+r:_3M1;
+
+#lower;
+w:_2B1;
+dr:_1M2;
+s:_1M1;
+r:IP_N_FO;
+bpart;
+
+""THEN  SET            Timer1
+""WITH         3s
+""    JMP TO 3
+""STEP 3
+"" IF            N      Timer1
+"" ????? @0...
+"" OTHRW JMP TO 3
+

@@ -1,0 +1,31 @@
+_1M1;O0.00;BIT;Ejecting cylinder push out workpiece
+_2M1;O0.01;BIT;Vacuum on
+_2M2;O0.02;BIT;Ejection impulse on
+_3M1;O0.03;BIT;Swivel drive to magazine
+_3M2;O0.04;BIT;Swivel drive to subsequent station
+_P1;O1.00;BIT;Start indicator light
+_P2;O1.01;BIT;Reset indicator light
+_P3;O1.02;BIT;Magazine empty indicator light
+OWStat;OW0;WORD(Bin);outputbyte station
+OWPan;OW1;WORD(Bin);outputbyte panel
+_1B2;I0.01;BIT;Ejecting cylinder extended
+_1B1;I0.02;BIT;Ejecting cylinder retractet
+_3B1;I0.04;BIT;Swivel drive in pos. magazine
+_3B2;I0.05;BIT;Swivel drive i. pos. subsequ. stat.
+_B4;I0.06;BIT;Magazine empty
+IP_FI;I0.07;BIT;Downstream station free
+_2B1;I0.03;BIT;Workpiece picked up
+Em_Stop;I1.05;BIT;Emergency stop unlocked
+S1;I1.00;BIT;Start button
+S2;I1.01;BIT;Stop button (normally closed)
+S3;I1.02;BIT;Automatic-manual switch
+S4;I1.03;BIT;Reset button
+F_Start;F14.00;BIT;Start flag
+Init_Pos;F14.01;BIT;Distributing stat. i. initial pos.
+Reset_OK;F14.02;BIT;Reset succesfully completed
+CycleEnd;F14.03;BIT;Cycle end
+Init_Bit;F14.05;BIT;Initialisation bit
+Var1;FW14;WORD(Bin);
+P_Edge;F14.06;BIT;Edge flag
+T_Blink1;T0;BIT;Blink timer 1
+T_Blink2;T1;BIT;Blink timer 2
