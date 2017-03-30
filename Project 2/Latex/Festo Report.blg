@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Festo Report.aux
+The style file: ieeetr.bst
+Database file #1: references.bib
+You've used 15 entries,
+            1876 wiz_defined-function locations,
+            583 strings with 6487 characters,
+and the built_in function-call counts, 4644 in all, are:
+= -- 485
+> -- 153
+< -- 0
++ -- 58
+- -- 43
+* -- 339
+:= -- 646
+add.period$ -- 15
+call.type$ -- 15
+change.case$ -- 15
+chr.to.int$ -- 0
+cite$ -- 15
+duplicate$ -- 245
+empty$ -- 412
+format.name$ -- 43
+if$ -- 1155
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 15
+newline$ -- 48
+num.names$ -- 15
+pop$ -- 19
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 192
+stack$ -- 0
+substring$ -- 347
+swap$ -- 125
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 45
+width$ -- 17
+write$ -- 166
