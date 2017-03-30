@@ -4,10 +4,10 @@
 \contentsline {subsection}{\numberline {2.2}Algorithm}{3}
 \contentsline {subsection}{\numberline {2.3}Station One}{3}
 \contentsline {subsection}{\numberline {2.4}Station two}{3}
-\contentsline {subsection}{\numberline {2.5}Station three}{3}
-\contentsline {subsection}{\numberline {2.6}Station four}{3}
-\contentsline {section}{\numberline {3}RESULTS}{3}
-\contentsline {subsection}{\numberline {3.1}Debugging}{3}
-\contentsline {subsection}{\numberline {3.2}Testing}{4}
-\contentsline {subsection}{\numberline {3.3}Finalising}{4}
-\contentsline {section}{\numberline {4}CONCLUSIONS}{4}
+\contentsline {subsection}{\numberline {2.5}Station three}{4}
+\contentsline {subsection}{\numberline {2.6}Station four}{4}
+\contentsline {section}{\numberline {3}RESULTS}{4}
+\contentsline {subsection}{\numberline {3.1}Debugging}{4}
+\contentsline {subsection}{\numberline {3.2}Testing}{5}
+\contentsline {subsection}{\numberline {3.3}Finalising}{5}
+\contentsline {section}{\numberline {4}CONCLUSIONS}{5}
