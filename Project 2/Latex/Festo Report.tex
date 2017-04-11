@@ -2,7 +2,7 @@
 \documentclass[a4paper, 10pt,  conference]{article}  
 
 \usepackage{geometry}
-\geometry{legalpaper, margin=1.5in}
+\geometry{a4paper, margin=1in}
     
     
 \usepackage{verbatim}
@@ -85,7 +85,7 @@ After this process is complete, it will repeat indefinitely until there are no p
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\clearpage
 \subsection{Station two}
 Station two will receive the puck from station one via being handed over by the swivel arm. The station uses a timer to wait for the swivel arm to react after dropping the puck and clear. The puck is then raised and deployed via an ejection cylinder onto an air slider platform where it continues to the next phase of the process.
 
@@ -118,13 +118,13 @@ Completing tasks for programming each of the stations and linking them together 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\clearpage
 \subsection{Debugging} 
 While the process is straight forward and consists of step by step operations, the procedure in which to get there is not. While in a program a system may appear sound, there are many underlying issues, that of which if are not addressed will cause serious malfunction down the line. 
 
 It is imperative that all processes are enabled and disabled in a suitable fashion such that the system is reliant on the next steps status. This means that while it may be simple to just use a timer and guess the time intervals between stages, after the 10th or 100th or 1000th step the time interval may have adjusted out of sync with the rest of the sequence and thus cause a jam, or other malfunction in which is catastrophic for the system. To avoid this simple stages based on sensors are used in steps, and timers may be used in these steps as long as such use is consistent with the stages in the loop and will not potentially become out of phase with the system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
 
 \subsection{Testing}
 It is always important to test the system for any glitches while debugging. There is always room for improvement in making the system more efficient and effective from start to finish. This includes ensuring that the system knows what to do in the event that the task at hand is complete, or even after this stage when more tasks or jobs are added to the system.
