@@ -1,5 +1,5 @@
 
-\documentclass[a4paper, 10pt]{article}  
+\documentclass[a4paper, 10pt]{IEEEconf}  
 
 \usepackage{geometry}
 \geometry{a4paper, margin=1in}
@@ -10,6 +10,9 @@
 \usepackage{cite}
 \usepackage{listings}
 \usepackage{float}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
 
 \lstset{
 	tabsize=2,
@@ -17,6 +20,7 @@
 }
 
 \setlength{\parskip}{1em}
+\onecolumn
 
 \title{\LARGE \bf Project 1: Pneumatic Cylinder\\Mechatronics  282 778}
 \author{Marc Alexander Sferrazza \\ 12164165
@@ -29,8 +33,8 @@
 \maketitle
 
 %\begin{figure}[H]
-%  \includegraphics[width=\linewidth]{images/}
-%  \label{fig:opencv}
+%  \includegraphics[width=\linewidth]{images/final}
+%  \label{fig:Final Product}
 %\end{figure}
 
 \thispagestyle{empty}
@@ -44,13 +48,10 @@
 Pneumatic actuation controlled project involving the projection of tennis balls. The projectiles are deployed from the actuation controlled device at fixed intervals and have an optional override to deploy manually. 
 \\
 
-The project involves constructing the frame in which will enclose and secure all parts in an orderly safe fashion; designing and building the PCB circuit with the consideration of controlling the solenoid and reading and displaying the extension of the actuator.
+The project involves constructing a frame in which will enclose and secure all parts in an orderly safe fashion; designing and building the PCB circuit with the consideration of controlling the solenoid, reading and displaying the extension of the actuator.
 \\
 
-In this process acquired Mechatronics skills are tested to build a devices which has mechanical, electrical and programming components with consideration of materials properties. To utilise all of the skills on a basic level of which can measure the performance and aptitude of converging these skills, and how things are done individually. While there are many methods consisting of different professional approaches is key for performance on an industry level.
-
-
-%A brief report on OpenCV to calculate spatial transformations. Each step was tested and an output image saved to the local folder. For a more detailed instruction on the stages not explained please review the source code in the appendix.
+In this process, acquired Mechatronics skills are tested to build a devices which has mechanical, electrical and programming components with consideration of materials properties. To utilise all of the skills on a basic level of which can measure the performance and aptitude of converging these skills, and how things are done individually. While there are many methods to preform the task, consisting of different professional approaches is key for performance on an industry level.
 
 \end{abstract}
 
@@ -61,6 +62,7 @@ In this process acquired Mechatronics skills are tested to build a devices which
 %\listoftables
 \thispagestyle{empty}
 \clearpage
+\twocolumn
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -69,181 +71,193 @@ In this process acquired Mechatronics skills are tested to build a devices which
 
 \section{INTRODUCTION}
 
-You are required to build a mechatronic device that makes use of your mechatronic actuation and sensing sub-systems, and their respective control interface, to time the ejection of a part from a hopper. The part to be ejected is a tennis ball. You will need to design the hopper, which should hold three tennis balls. The tennis balls will be pre-loaded into the hopper. The time between the balls being ejected is up to you (approximately two to three seconds per ball would be ideal; 20 to 30 seconds per ball not as ideal).
-
-%OpenCV (Open Source Computer Vision Library) is an open source machine learning library for visual components. It has been widely accepted as one of the worlds most used image processing tools, and has the capability of static and dynamic comprehension. Some of the basic features available in OpenCV are capable mapping environments to be used in demonstration such as self driving cars lane detection. 
-%
-%The process's aim in this project to achieve is to design a program in the Visual Studio environment, using the OpenCV library that will detect an characters location and find the work piece and its target location in a given workspace. The objective is to then calculate the distance and angle required to translate and rotate the work piece from its current location to it target location; and finally express the distance and angle as a homogeneous transform, and display the final results and image to the user, as described in the outline. 
-%
-%Unfortunately due to technical issues experienced, the final program has been compiled from source on a Mac with terminal. The shared and static lib's created in cmake then processed executables saved in the local library. Please note this when trying to re-compile as the some of the linkers may direct to other locations e.g. headers.
-%
-%OpenCV is a powerful tool for image processing with more then 2500 algorithms available in its library; by using several functions within the OpenCV library, a processed image will produce these values. 
+The project is to utilise skills acquired, to build a mechatronic device that uses an actuation and sensing sub-system, with a control interface to time the interval in which it takes to deploy a projectile (tennis ball) from the hopper. The hopper can hold up to 3 projectiles (tennis balls) which are pre-loaded, and will deploy with a fixed time interval or manual override ejection.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Aims \& Objectives}
 
-To build a mechatronic device, integrating actuation, sensing, and control sub-systems.
+To build a mechatronic sub-system device, integrating actuation, sensing, and control sub-systems.
+
+The key objectives to cover in this task includes
 
 \begin{itemize}
-	\item To design a mechatronic sub-system that effects extension and contraction of a pneumatic cylinder.	\item To design a mechatronic sub-system that measures the extension and contraction of a pneumatic cylinder.	\item To integrate your mechatronic actuation, sensor, and control sub-systems in order to eject a part from a hopper with a fixed period between ejection of subsequent parts.
-	\item 
+	\item Control the extension and contraction of a pneumatic cylinder.	\item Measure the extension and contraction of a pneumatic cylinder.	\item Integrate the mechatronic actuation, sensor, and control sub-systems in order to eject projectiles from a hopper with a fixed time period between deployments.
 \end{itemize}
 
-There are no constraints at which the design is to be achieved leaving the best found method determinded by 
-
-%After the transform function has been called, the image is read into memory and resized for processing. In order to make the process more definite a conversion to greyscale is necessary, this will make the process more robust by converting a BGR. The greyscale conversion is ready to begin, using the cvtColor function to convert the image to greyscale (BGR2GRAY) will help in the detection processing.
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
+There are no constraints at which the design is to be achieved, leaving the best found method determined by the development. Therefore the process and development in the design is open for opinion given appropriate reasoning.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{METHOD}
 
-Considerations of this, and analysis are done such as FEA strain tests and 
+Detailed description of what was done, how, and why. 
+***********************
 
-%A few images have been provided of different characters on a workspace and their corresponding transform locations. The process will involve filtering this image to a workable standard in which the contours can be used to formulate the translations and transformations from frames of workspaces. 
-%
-%As there are five images the option to run the process with all outputs was first made, but then the decision of what images to check was implemented using the case keys 1, 2, 3, 4, 5, esc - A prompt will be given to the user to select which image to process and find the balls with their colours; the user can cycle back to the main image selection and select another image to process. 
-%
-%The program can be closed by selecting the esc key from the prompt menu. This process helps break down the information for a simpler and more specific program allowing the user to choose their results accordingly.
-%
-%The image is then loaded to memory and with each step through the detection the image is saved for easy debugging, it also helps create a faster process and cleaner environment. 
-%
-%After the user has selected a desired image to process the transform function is called to preform the action. The sequence begins with the original image as shown below (set three from the five images are used for demo purposes in this report, as it was found one of the more complex)
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Frame Material Selection}
+
+Planning in design for structural integrity is subject to the workspaces constraints, while there are many methods of which the design can be achieved, in a long life usage of the project using metals can prove effective; however in the projects scope the projectiles may be launched a minimum of eight times effectively without damage to the chassis. Therefore the design materials are chosen subject to a prototype friendly, cost effective method which will meet the required eight successful launches for demonstration and any additional deployment during testing and compensation of the demonstration. 
+
+The estimated reasonable number of ejections required used is 100 cycles of both extension and contraction for the pneumatic cylinder, as this is the highest action point of the device, while all other parts remain fixed except the projectiles themselves. With considerations of this, and analysis provided such as FEA strain tests over 200 (double the required) cycles with Solidworks 2015 and the isolated actuation frame the selected material chosen is entirely based on acrylic with the exception of PVC piping (explained further in frame design for the hopper pre-load). 
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{images/cylinder}
+  \caption{Isolated actuation frame}
+  \label{fig:Isolated actuation frame}
+\end{figure}
+
+While acrylic is more brittle then other ready available materials such as MDF, acrylic has the beneficial key feature of being fully transparent, so a full display of all parts can be monitored, and the full demonstration of all internal parts can be observed. Another key reason for this choice in material is the bonding of surfaces in the respect that with specific chemicals applied the surfaces fuse together and become bonded, almost in the sense they were moulded that way which with correct design can spread force through the entire chassis.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Frame design}
+
+PVC pipe for hopper to contain the pre-loaded projectiles and the 
+*************
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{images/laser}
+  \caption{Laser cutting the frame}
+  \label{fig:Laser cutting the frame}
+\end{figure}
+
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{images/Frame}
+  \caption{Basic stripped frame before population}
+  \label{fig:Basic stripped frame before population}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Bonding \& Linkages}
+
+To secure the frame M3 30mm bolts and nuts were used with 8xM6 bolts securing the pneumatic actuator. All mounting and fastening of internal components is also achieved with M3 size bolts, while dampening foam has been used to cushion some surfaces.
+
+The primary influence in structure bonding is C105 also known as acrylic weld but not to be mistaken with C502 also known as super glue for plastics and rubbers, which offers a different method of molecular bonding of surfaces. The advantage of C105 is that it is extremely thin comparable with water and preforms quick bonding which results in two or more surfaces being fused like overlaying corrugated iron.
+
+The 105 Acribond contains
+\begin{itemize}
+	\item U.N. 1593 METHYLENE CHLORIDE CAS No. 75-09-2
+	\item U.N. 1710 TRICHLOROETHYLENE STABILIZED CAS No. 79-01-6	\item U.N. 1247 METHYL METHACRYLATE MONOMER CAS No. 80-62-6
+\end{itemize}
+PG III, HAZCHEM CODE 2Z, Class 6.1
+
+For a more in depth discussion on bonding materials and useful chemistry for plastics and rubbers ePlastics website is linked in the reference section \cite{ePlastic}; the 105 Acribond link \cite{105} is also provided.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Power Supply}
+
+The available option of a 24VDC bench power supply is provided, however for ease of use in testing and probability an internal power supply has been integrated. The selected cells are 2x 12VDC 7AH Gel AGM SLA batteries connected in series to provide a stable constant reliable power source which does not require frequent charging. The resultant supply is 24VDC 7AH for reference. 
+
+There is a built in universal charge port using banana sockets of which any appropriate SLA 24V charger can be used. Due to the nature of the batteries and the self maintenance hydrogen gas released the frame includes vents for any build up of gas or excess heat from components.
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{images/Battery}
+  \caption{Tree Battery 12VDC 7AH Gel AGM SLA}
+  \label{fig:Basic stripped frame before population}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Eagle PCB}
+
+Using Eagle CAD-soft from Autodesk \cite{eagle} a PCB is designed and implimented. 
+
+The PCB design includes the following
+\begin{itemize}
+	\item Arduino controller
+	\item Voltage regulator (24VDC to 5VDC)
+	\item Relay from the Arduino to the solenoid (5VDC to 24VDC/120VDC 1A)
+	\item Relevant LED's
+	\item Safety features e.g. fuses (0.5A)
+	\item Ground Core
+\end{itemize}
+
+The components are shown in a working order below. The LED's indicate the state of each action, with the red LED relating to power from the source at each stage 24VDC. Yellow being the state of the stage after some processing, the first being the regulation from 24VDC to 5VDC, the second being the normally closed side of the relay or contraction of the actuation arm. Finally the green LED is for the extension state of the actuation arm. These LED's are for status states only and debugging thus why they are not mounted and displayed on the enclosure although visible.
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{images/parts}
+  \caption{Components of design}
+  \label{fig:Components of design}
+\end{figure}
+
+A schematic of the design is given below. The design does not include capacitors after the regulator (or an attached heatsink) due to the current draw being less the 20\% of the capacity of the transistor which is 1A and is not required.
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{images/Schematic}
+  \caption{Schematic}
+  \label{fig:Schematic}
+\end{figure}
+
+The board drill out design is shown below. The purpose of this layout being a seperate entity rather then a shield of the Arduino, this is for display purposes only, and to preform visual inspection from the exterior of the enclosure for assessment and debugging. 
+
+\begin{figure}[H]
+  \includegraphics[width=\linewidth]{images/Board}
+  \caption{Board design}
+  \label{fig:Board design}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Sensor Selection}
+
+In order to measure the distance of the pneumatic actuation arm a form of sensor is acquired. The sensor chosen is the *****, this was selected due to the *********** and the linear properties of the sensors measurement, without issues from depreciation due to limited cycles.
+
+The Actuation is measured with the ******** sensor and sent to the Arduino, which in turn translates the read value from voltage to decimal and is displayed in millimetres on the mounted LCD display located above the Arduino and PCB on the inside of the enclosure. 
+
 %\begin{figure}[H]
-%  \includegraphics[width=\linewidth]{images/3}
-%  \caption{Initial Image}
-%  \label{fig:Initial Image}
+%  \includegraphics[width=\linewidth]{images/sensor}
+%  \caption{Selected sensor}
+%  \label{fig:Selected sensor}
 %\end{figure}
-%
-%After the image has been processed and the workspace translated, and output is displayed of the resulting transformations; a homogenous matrix is also displayed.
-%
-%A full break down of the process has been attached and can be found in the code in the appendix. The following code is the process for user input and the function call for transform.
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{BGR to HSV conversion}
+\subsection{Programming}
 
-%After the transform function has been called, the image is read into memory and resized for processing. In order to make the process more definite a conversion to greyscale is necessary, this will make the process more robust by converting a BGR. The greyscale conversion is ready to begin, using the cvtColor function to convert the image to greyscale (BGR2GRAY) will help in the detection processing.
+The selected device for use as the controller, and to measure and display the extension is the Arduino Uno. The reasons this was the selected micro-controller board is for no other then being cost effective, as this was taken from past years projects. As there were no specifications on what must be used this was the most appropriate solution.
 
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Gaussian Blur}
-
-%The Gaussian blur is used to reduce the noise of the image and smoothing the edges to help eliminate any external influences when finding the shape and give a more accurate average of the pixels. The function will transform the image using convolution matrix Gaussian kernel, and will give a result based on each pixel and it's surrounding pixels to contour and blur while maintaining the edges integrity.
-%
-%After the Gaussian process, the image is passed to the canny operator for edge detection. The best values for Gaussian used are a 3x3 kernel matrix with a standard deviation of 1.
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Canny edge detection}
-
-%The Gaussian blur Canny edge detection function is then called to preform detection for the workspace. The frames are assessed from the greyscale smooth edged original image, and the output is assigned to out threshold image space.
-% 
-%After the canny edge detection the image is then passed though a dilation and erosion functions to reduce noise.
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Dilation \& Erosion}
-
-%Using the dilation function the image begins to form more solid shapes and removes discrepancies to better form solid filled in shapes, by adding pixels to the boundaries found of objects and shapes in a greyscale image. The erosion function then emphasises those shapes making it easier for the shape identifier later on by removing pixels from the boundaries of objects. The best values found for the size of the morphological operations are as shown below.
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Contours}
-
-%This algorithm finalises the edge detection and creates fine line edges for rotating the rectangles. After all the vectors containing contours are stored, and the hierarchy datatype is linked, when the function is called the parent and child contours are stored respectivly.
-%
-%The algorithm finds the rectangles of each outline (character) which subsequently is used to establish the orientation by using the vertices of the contour, and in turn find the difference in angle for each object. The output of this process gives two vectors that contains instances as elements the same size of the vectors of that from contour. The significant points are then recorded to the vector matrices to find the spacial transformations. 
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Bounding Rectangles \& Approximate Contours to Polygons}
-
-%Bounding for a particular object rectangle converts the contour to a polygon shape. The vector is that of the same size of the contour vector, but is declared to address the points of each rectangle. The algorithm used converts the bounding rectangles to a polygon shape.
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Drawing Contours, Rotated Rectangles \& Center circles with Axis}
-
-%In this process an image is then created to find the spacial transforms. The first step is to save all the points required to the image, then draw them on the final image. The process involves using contrasts to find contour lines, then looping to draw the contour lines and rectangles accordingly. The center and translation lines are then drawn to establish the difference between the two rectangles and find the coordinates for each contour.
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Translation}
-
-%As the z axis is ignored in this instance the x and y axis are observed to find the translation difference of the two center points of the rectangles. Using Pythagoras's trigonometry equations with the established center points a subsidy can be made to suit the algorithm and simply find the difference of the characters. Then to rotate the character it is first found between a positive or negative 180 degree value, and in the clockwise or anticlockwise direction. The angles are found for each set of 90 degrees passed, then adjusted accordingly.
-
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
+A summary of the code is shown in the appendix which covers in full the method of deploying the projectiles, the override function, and displaying the displacement of the actuator. Please see the comments embedded in the code for a more step by step detailed explanation for what is being processed.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{RESULTS}
 
-%After the processing is complete the original image is displayed, and terminal output response given; The final result is shown below. The process is successful and the workspace transformation is complete. The user can now press any key to go back and select another image, or after closing the image hit the "esc" key to exit the program.
 
-\begin{lstlisting}[language = C++]
-
-\end{lstlisting}
 
 %\begin{figure}[H]
-%  \includegraphics[width=\linewidth]{images/F3}
-%  \caption{The final image is given with workspace results}
-%  \label{fig:The final image is given with workspace results}
+%  \includegraphics[width=\linewidth]{images/final}
+%  \caption{The final product}
+%  \label{fig:The final product}
 %\end{figure}
-%
-%After the transformation and translation of the frames the final image is saved to the local output folder, per process, the center coordinates, homogeneous transformation matrix, rotation and translation between characters are all displayed to the user as output in terminal. A sample of the results can be seen below.
-%
+
 %\begin{figure}[H]
-%  \includegraphics[width=\linewidth]{images/shell}
-%  \caption{The final results shown of the output: center coordinates, homogeneous transformation matrix, rotation and translation between characters}
-%  \label{fig:Final Results Shell}
+%  \includegraphics[width=\linewidth]{images/final2}
+%  \caption{The final product side 2}
+%  \label{fig:The final product side 2}
 %\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{OUTCOMES}
+
+Successfully achieved and built a mechatronic sub-system using the following
+
+\begin{itemize}
+	\item Sensing elements and signal conditioning used within a mechatronic device
+	\item Pneumatics and hydraulics
+	\item Mechanical and electrical actuators
+	\item Integrated mechatronic sub-systems to build a mechatronic device
+	\item Configured and use PC and PLC control systems
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -297,6 +311,8 @@ Considerations of this, and analysis are done such as FEA strain tests and
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
+\onecolumn
+
 \section*{APPENDIX}
 
 \begin{lstlisting}[language = C++]
