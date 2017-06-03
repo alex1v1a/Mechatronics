@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.3.12)  22 MAY 2017 04:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.3.12)  3 JUN 2017 17:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -153,7 +153,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box30
 \@float@everytoks=\toks22
 \@floatcapt=\box31
-) (/Users/FLCL/Documents/University 2017/Robotics-and-Automation/OpenCV/Assignment 3/Latex/.texpadtmp/OpenCV 2 Report.aux)
+) (/Users/FLCL/Documents/University 2017/Mechatronics/Project 1 - Pneumatic/Latex/.texpadtmp/OpenCV 2 Report.aux)
 \openout1 = `"OpenCV 2 Report.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -274,86 +274,60 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 29.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
- <images/opencv.jpg, id=1, 597.432pt x 178.0251pt>
-File: images/opencv.jpg Graphic file (type jpg)
- <use images/opencv.jpg>
-Package pdftex.def Info: images/opencv.jpg used on input line 32.
-(pdftex.def)             Requested size: 452.9679pt x 134.97992pt.
- [1
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/opencv.jpg>] (/Users/FLCL/Documents/University 2017/Robotics-and-Automation/OpenCV/Assignment 3/Latex/.texpadtmp/OpenCV 2 Report.toc
+Underfull \hbox (badness 10000) in paragraph at lines 44--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
+
+ []
+
+[1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/FLCL/Documents/University 2017/Mechatronics/Project 1 - Pneumatic/Latex/.texpadtmp/OpenCV 2 Report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
+(Font)              <7> on input line 2.
 )
 \tf@toc=\write3
 \openout3 = `"OpenCV 2 Report.toc"'.
 
- (/Users/FLCL/Documents/University 2017/Robotics-and-Automation/OpenCV/Assignment 3/Latex/.texpadtmp/OpenCV 2 Report.lof)
+ (/Users/FLCL/Documents/University 2017/Mechatronics/Project 1 - Pneumatic/Latex/.texpadtmp/OpenCV 2 Report.lof)
 \tf@lof=\write4
 \openout4 = `"OpenCV 2 Report.lof"'.
 
  [2
 
-] <images/3.jpg, id=20, 2313.64375pt x 1301.86375pt>
-File: images/3.jpg Graphic file (type jpg)
- <use images/3.jpg>
-Package pdftex.def Info: images/3.jpg used on input line 87.
-(pdftex.def)             Requested size: 452.9679pt x 254.86559pt.
- [1
-
-] (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 98.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 98.
+) [1
 
-Overfull \hbox (23.03674pt too wide) in paragraph at lines 98--99
-[][] 
- []
+] [2] (/Users/FLCL/Documents/University 2017/Mechatronics/Project 1 - Pneumatic/Latex/.texpadtmp/OpenCV 2 Report.bbl) [3
 
-[2 <./images/3.jpg>] [3] [4] [5] <images/F3.jpg, id=40, 1156.32pt x 650.43pt>
-File: images/F3.jpg Graphic file (type jpg)
- <use images/F3.jpg>
-Package pdftex.def Info: images/F3.jpg used on input line 331.
-(pdftex.def)             Requested size: 452.9679pt x 254.78818pt.
- [6] <images/shell.png, id=44, 517.935pt x 278.03876pt>
-File: images/shell.png Graphic file (type png)
- <use images/shell.png>
-Package pdftex.def Info: images/shell.png used on input line 339.
-(pdftex.def)             Requested size: 452.9679pt x 243.173pt.
- [7 <./images/F3.jpg> <./images/shell.png>] [8] (/Users/FLCL/Documents/University 2017/Robotics-and-Automation/OpenCV/Assignment 3/Latex/.texpadtmp/OpenCV 2 Report.bbl) [9
+] [4
 
-]
-Overfull \hbox (23.03674pt too wide) in paragraph at lines 425--426
-[][] 
- []
-
-[10
-
-] [11] [12] [13] (/Users/FLCL/Documents/University 2017/Robotics-and-Automation/OpenCV/Assignment 3/Latex/.texpadtmp/OpenCV 2 Report.aux) ) 
+] (/Users/FLCL/Documents/University 2017/Mechatronics/Project 1 - Pneumatic/Latex/.texpadtmp/OpenCV 2 Report.aux) ) 
 Here is how much of TeX's memory you used:
- 5096 strings out of 493014
- 74796 string characters out of 6133351
- 336091 words of memory out of 5000000
- 8547 multiletter control sequences out of 15000+600000
- 9490 words of font info for 34 fonts, out of 8000000 for 9000
+ 4819 strings out of 493014
+ 71230 string characters out of 6133351
+ 167610 words of memory out of 5000000
+ 8281 multiletter control sequences out of 15000+600000
+ 9144 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,60p,573b,1590s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on "/Users/FLCL/Documents/University 2017/Robotics-and-Automation/OpenCV/Assignment 3/Latex/.texpadtmp/OpenCV 2 Report.pdf" (15 pages, 862455 bytes).
+ 38i,11n,60p,574b,1019s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on "/Users/FLCL/Documents/University 2017/Mechatronics/Project 1 - Pneumatic/Latex/.texpadtmp/OpenCV 2 Report.pdf" (6 pages, 138140 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

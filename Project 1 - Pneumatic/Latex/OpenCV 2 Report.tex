@@ -41,6 +41,15 @@
 
 \begin{abstract}
 
+Pneumatic actuation controlled project involving the projection of tennis balls. The projectiles are deployed from the actuation controlled device at fixed intervals and have an optional override to deploy manually. 
+\\
+
+The project involves constructing the frame in which will enclose and secure all parts in an orderly safe fashion; designing and building the PCB circuit with the consideration of controlling the solenoid and reading and displaying the extension of the actuator.
+\\
+
+In this process acquired Mechatronics skills are tested to build a devices which has mechanical, electrical and programming components with consideration of materials properties. To utilise all of the skills on a basic level of which can measure the performance and aptitude of converging these skills, and how things are done individually. While there are many methods consisting of different professional approaches is key for performance on an industry level.
+
+
 %A brief report on OpenCV to calculate spatial transformations. Each step was tested and an output image saved to the local folder. For a more detailed instruction on the stages not explained please review the source code in the appendix.
 
 \end{abstract}
@@ -60,6 +69,8 @@
 
 \section{INTRODUCTION}
 
+You are required to build a mechatronic device that makes use of your mechatronic actuation and sensing sub-systems, and their respective control interface, to time the ejection of a part from a hopper. The part to be ejected is a tennis ball. You will need to design the hopper, which should hold three tennis balls. The tennis balls will be pre-loaded into the hopper. The time between the balls being ejected is up to you (approximately two to three seconds per ball would be ideal; 20 to 30 seconds per ball not as ideal).
+
 %OpenCV (Open Source Computer Vision Library) is an open source machine learning library for visual components. It has been widely accepted as one of the worlds most used image processing tools, and has the capability of static and dynamic comprehension. Some of the basic features available in OpenCV are capable mapping environments to be used in demonstration such as self driving cars lane detection. 
 %
 %The process's aim in this project to achieve is to design a program in the Visual Studio environment, using the OpenCV library that will detect an characters location and find the work piece and its target location in a given workspace. The objective is to then calculate the distance and angle required to translate and rotate the work piece from its current location to it target location; and finally express the distance and angle as a homogeneous transform, and display the final results and image to the user, as described in the outline. 
@@ -69,9 +80,30 @@
 %OpenCV is a powerful tool for image processing with more then 2500 algorithms available in its library; by using several functions within the OpenCV library, a processed image will produce these values. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Aims \& Objectives}
+
+To build a mechatronic device, integrating actuation, sensing, and control sub-systems.
+
+\begin{itemize}
+	\item To design a mechatronic sub-system that effects extension and contraction of a pneumatic cylinder.	\item To design a mechatronic sub-system that measures the extension and contraction of a pneumatic cylinder.	\item To integrate your mechatronic actuation, sensor, and control sub-systems in order to eject a part from a hopper with a fixed period between ejection of subsequent parts.
+	\item 
+\end{itemize}
+
+There are no constraints at which the design is to be achieved leaving the best found method determinded by 
+
+%After the transform function has been called, the image is read into memory and resized for processing. In order to make the process more definite a conversion to greyscale is necessary, this will make the process more robust by converting a BGR. The greyscale conversion is ready to begin, using the cvtColor function to convert the image to greyscale (BGR2GRAY) will help in the detection processing.
+
+\begin{lstlisting}[language = C++]
+
+\end{lstlisting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{METHOD}
+
+Considerations of this, and analysis are done such as FEA strain tests and 
 
 %A few images have been provided of different characters on a workspace and their corresponding transform locations. The process will involve filtering this image to a workable standard in which the contours can be used to formulate the translations and transformations from frames of workspaces. 
 %
