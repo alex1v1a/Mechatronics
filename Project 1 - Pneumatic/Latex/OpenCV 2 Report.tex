@@ -71,7 +71,7 @@ In this process, acquired Mechatronics skills are tested to build a devices whic
 
 \section{INTRODUCTION}
 
-The project is to utilise skills acquired, to build a mechatronic device that uses an actuation and sensing sub-system, with a control interface to time the interval in which it takes to deploy a projectile (tennis ball) from the hopper. The hopper can hold up to 3 projectiles (tennis balls) which are pre-loaded, and will deploy with a fixed time interval or manual override ejection.
+The project is to utilise skills acquired, to build a mechatronic device that uses an actuation and sensing sub-system, with a control interface to time the interval in which it takes to deploy a projectile (tennis ball) from the hopper. The interface will display the extension of the actuator on an LCD display. The hopper can hold up to 3 projectiles (tennis balls) which are pre-loaded, and will deploy with a fixed time interval or manual override ejection.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -92,8 +92,7 @@ There are no constraints at which the design is to be achieved, leaving the best
 
 \section{METHOD}
 
-Detailed description of what was done, how, and why. 
-***********************
+A detailed description of what was done, how, and why. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -101,7 +100,9 @@ Detailed description of what was done, how, and why.
 
 Planning in design for structural integrity is subject to the workspaces constraints, while there are many methods of which the design can be achieved, in a long life usage of the project using metals can prove effective; however in the projects scope the projectiles may be launched a minimum of eight times effectively without damage to the chassis. Therefore the design materials are chosen subject to a prototype friendly, cost effective method which will meet the required eight successful launches for demonstration and any additional deployment during testing and compensation of the demonstration. 
 
-The estimated reasonable number of ejections required used is 100 cycles of both extension and contraction for the pneumatic cylinder, as this is the highest action point of the device, while all other parts remain fixed except the projectiles themselves. With considerations of this, and analysis provided such as FEA strain tests over 200 (double the required) cycles with Solidworks 2015 and the isolated actuation frame the selected material chosen is entirely based on acrylic with the exception of PVC piping (explained further in frame design for the hopper pre-load). 
+The estimated reasonable number of ejections required used is 100 cycles of both extension and contraction for the pneumatic cylinder, as this is the highest action point of the device, while all other parts remain fixed except the projectiles themselves. 
+
+With considerations of this, and analysis provided such as FEA strain tests over 200 (double the required) cycles with Solidworks 2015 and the isolated actuation frame the selected material chosen is entirely based on acrylic with the exception of PVC piping (explained further in frame design for the hopper pre-load). 
 
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{images/cylinder}
@@ -116,8 +117,13 @@ While acrylic is more brittle then other ready available materials such as MDF, 
 
 \subsection{Frame design}
 
-PVC pipe for hopper to contain the pre-loaded projectiles and the 
-*************
+For the frames design it is important to have a clean and functional, practical layout, so that all components have an appropriate amount of space and remain somewhat easily accessible. The enclosure should be safe with no hazardous features such as electric safety and sharpe edges to be cut on. As this is not a final manufacturable product, and rather more towards a prototype model the features are not strict on including mould casting and perfect rounded edges, but still somewhat of a safe standard with no edge lifting and fused surfaces to maintain integrity. 
+
+The frames design will be used as not only the containing housing, but also as a key point in the systems integrity. This is due to the force load's shock being dissipated over a compression surface rather then stressed all on a single point. The design features this to allow the acrylic to slightly expand on each deployment of a projectile, and in the expansion stage to lengthen the duration of the force to ensure the enclosure will not crack for the expected life cycles. This is the fundamental key aspect when designing the enclosure, along side the secure fitment and spacing of all components. 
+
+The material selection of acrylic and PCV piping is a cheap and effective way for rapid prototyping, and has not only has great functionality in this design, but also allows assessment of the internal design with the transparent enclosure. The selected PVC pipe (80mm) for hopper to contain the pre-loaded projectiles, and a more accurate deployment has been chosen as it is a cheap and effective method of storing, with a compensation of 6-10mm each side (An internationally recognised tennis balls diameter is 65.4–68.6mm) \cite{ball} of the projectile. While it has been difficult to cut the piping accurately a 'T' pipe has be used rather then assembling a custom joint as this was found to be a better method.
+
+Below is a figure of the rapid prototyping process. The parts are laser cut, and another beneficial aspect of this is that if any part shall unfortunately break for whatever reason, a replacement part can be cut with little effort.
 
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{images/laser}
@@ -125,6 +131,7 @@ PVC pipe for hopper to contain the pre-loaded projectiles and the
   \label{fig:Laser cutting the frame}
 \end{figure}
 
+Shown below is the base frame assembly with the solenoid and pneumatic actuator.
 
 \begin{figure}[H]
   \includegraphics[width=\linewidth]{images/Frame}
@@ -230,7 +237,7 @@ A summary of the code is shown in the appendix which covers in full the method o
 
 \section{RESULTS}
 
-
+The products procedure resulted in a successful build of which a projectile is deployed and given information is passed to the user on a mounted LCD display. All of the objectives sought out to achieve have been completed. The projectiles average range was recorded at ****m when launched from the ground and ****m when launched from 1m above ground level. Below is the finished product captured from two angles.
 
 %\begin{figure}[H]
 %  \includegraphics[width=\linewidth]{images/final}
@@ -263,29 +270,31 @@ Successfully achieved and built a mechatronic sub-system using the following
 
 \subsection{Fine Tuning} 
 
-%While the process is consistent it is a clear underling of step by step operations, the procedure in which was either suitable or inadequate. This involves checking the matrix at different points like the threshold values, dilation and erosion, the Gaussian blur, and in particular the vectors and contours for find bounding rects, circles, and approximate contours to polygons, translation and transforms of each frame and combine workspace.
+While the process is rudimentary there is much room for fine tuning, this could be in the design of the enclosure, the rate of actuation, the speed, and angle, of which the projectiles are deployed and so on. The range is highly subject to these parameters and is significantly effected from initial launch height so therefore an optimum combination of these can be found depending on the use of the product. After these parameters are established the settings can be tuned and set to random if chosen for a more unexpected distance result if required.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Testing}
 
-%Ensure the target of finding translation from frames are complete and accurate, checking each function independently for a robust break down and good debugging.
-%
-%Each step had an output image saved to check the processes respectively. The images are checked to make sure each stage is completing the task correctly, if not the code is then referred to and further revisions are made.
-%
-%Every image was tested with the values for recognition and tweaked in the fine tuning process to get the best possible results.
+The main aspects of testing is to show that the devices works and meets the objective criteria. After the projectiles are launch and LCD displayed, details of range can be recorded. A not necessarily obvious, but extremely key part of very necessary testing is the question of practicality; how easy it is to use and understand, is everything simple to understand and labeled correctly, and most importantly, how intuitive is the device. These features are checked over to make sure the device is simple and easy to setup and use, coming all in a single enclosure with enough information to determine functionality with no additional support. 
+
+The device is checked for standalone use, as well as being run via a computer interface terminal. It is easy to update and diagnose, and is simple to connect.
+
+After all the results are finalised, the outputs confirmed with objectives complete, the project is simplified for clarity and ease of use for future development and reference. Making the build stable and concise, and as robust as possible prompts for a good design. Checking over the functions and any redundant features, ensure a good user interface is easily workable and the outputs are all correct and comprehensive.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Finalising}
 
-%After all the results were finalised and correct the outputs and results confirmed the code was then stripped and simplified for clarity and ease of use for future development and reference.
-%
-%Making the program stable and concise, and as robust as possible builds for a good design. Checking over the functions and any redundant code, ensure a good user interface is easily workable and the outputs are all correct and comprehensive.
+As this is a prototype build a further recommendation coming to a final product design would be to use an ABS mould with rounded edges and an integrated handle with an adjustable deploy angle fitment and 1.5m portable stand. A bluetooth remote would also be handy to start the sequence 0-15m no obstruction range, as an official tennis court is 23.77m long and singles line distance is 10.97m \cite{ball} xtherefore the average range would not exceed 15m once setup; that is if the product were to be used for this purpose.
+
+The main limitation of this device is there is no automatic rotation angle feature, meaning that if someone were to actually purchase this device it might be a key feature in which they seek. Therefore an investigation of how to incorporate this might prove necessary, however due to the scope of this project it is unnecessary to go further into details.
+
+Finally, being as the device is pressure driven, the option of having a replacement induction driven actuator should be considered if used in final product, as it may not be particle to have a compressor or refillable canister always attached.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
+
 \section{CONCLUSIONS}
 
 \subsection{Critical Evaluation and Methodology}
@@ -316,7 +325,10 @@ Successfully achieved and built a mechatronic sub-system using the following
 \section*{APPENDIX}
 
 \begin{lstlisting}[language = C++]
-
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+***********************************************************************
 \end{lstlisting}
 
 \end{document}

@@ -4,36 +4,36 @@ The top-level auxiliary file: /Users/FLCL/Documents/University 2017/Mechatronics
 The style file: ieeetr.bst
 Database file #1: ../references.bib
 Warning--I didn't find a database entry for "ePlastic"
-You've used 4 entries,
+You've used 5 entries,
             1876 wiz_defined-function locations,
-            497 strings with 4233 characters,
-and the built_in function-call counts, 550 in all, are:
-= -- 52
-> -- 16
+            502 strings with 4412 characters,
+and the built_in function-call counts, 682 in all, are:
+= -- 65
+> -- 20
 < -- 0
-+ -- 8
-- -- 4
-* -- 18
-:= -- 87
-add.period$ -- 8
-call.type$ -- 4
-change.case$ -- 4
++ -- 10
+- -- 5
+* -- 22
+:= -- 106
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 5
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 16
-empty$ -- 73
-format.name$ -- 4
-if$ -- 137
+cite$ -- 5
+duplicate$ -- 20
+empty$ -- 91
+format.name$ -- 5
+if$ -- 171
 int.to.chr$ -- 0
-int.to.str$ -- 4
+int.to.str$ -- 5
 missing$ -- 0
-newline$ -- 19
-num.names$ -- 4
-pop$ -- 28
+newline$ -- 23
+num.names$ -- 5
+pop$ -- 35
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 12
+skip$ -- 15
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -42,7 +42,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 4
-width$ -- 5
-write$ -- 38
+while$ -- 5
+width$ -- 6
+write$ -- 47
 (There was 1 warning)
