@@ -547,7 +547,7 @@ drill 1.0 mm</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="1" drill="2">
+<class number="0" name="default" width="2" drill="3">
 <clearance class="0" value="0.5"/>
 </class>
 </classes>

@@ -177,7 +177,7 @@
 <hole x="148.59" y="54.61" drill="1"/>
 <text x="78.74" y="40.64" size="1.778" layer="1">DIGITAL SIGNAL INPUT</text>
 <text x="83.82" y="46.99" size="1.778" layer="1">GND</text>
-<text x="143.51" y="43.18" size="1.778" layer="1">GND</text>
+<text x="143.51" y="41.91" size="1.778" layer="1">GND</text>
 <text x="143.51" y="13.97" size="1.778" layer="1">GND</text>
 <circle x="101.6" y="50.8" radius="1.27" width="1.016" layer="1"/>
 <circle x="80.01" y="36.83" radius="1.27" width="0.508" layer="1"/>

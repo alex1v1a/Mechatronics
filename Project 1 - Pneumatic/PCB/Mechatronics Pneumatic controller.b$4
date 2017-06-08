@@ -162,7 +162,7 @@
 <wire x1="73.66" y1="59.36" x2="73.66" y2="-1.27" width="0.508" layer="20"/>
 <text x="134.62" y="6.35" size="1.778" layer="1">POWER 24V</text>
 <text x="86.36" y="3.81" size="1.778" layer="1">REGULATOR 24V - 5V</text>
-<text x="77.47" y="3.81" size="1.778" layer="1" rot="R90">ARDUINO POWER 5V</text>
+<text x="78.74" y="5.08" size="1.778" layer="1" rot="R90">ARDUINO POWER 5V</text>
 <text x="113.03" y="43.18" size="1.778" layer="1">24V SAFTEY SWITCH</text>
 <text x="110.49" y="25.4" size="1.778" layer="1">RELAY 5V/24V</text>
 <text x="92.71" y="27.94" size="1.778" layer="1">RETRACT</text>
